@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Select List Test</title>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.minListFilter.min.js"></script>
+    <script type="text/javascript" src="js/sel.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sel.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h1> jquery.minListFilter </h1>
+      <h2> A minimal jquery filter plugin for HTML select lists.  </h2>
+    </div>
+    <div id="wrapperDiv">
+      <ul id="topBar">
+        <li><a href="jquery.minListFilter.zip">Download</a></li>
+        <li><a href="http://github.org/bsouther/minListFilter">GitHub</a></li>
+        <li><a href="http://simple.souther.us">Ben Souther</a></li>
+      </ul>
+      <div id="example">
+       <label for="theList"><strong>Example:</strong>(Slowly type "thre" in the field below)</label>
+       <select class="filteredLists" id="theList" name="thing2" >
+        <option value="101">ACME - Widgets - 101</option>
+        <option value="302">Nickerson Crafts - 302</option>
+        <option value="387">Henrietta's Hippos - 387</option>
+        <option value="876">Twin River's Towing - 876</option>
+        <option value="238">Town Pizza - 238</option>
+        <option value="666">Thirteen Stars Apothecary - 666</option>
+        <option value="342">Stone Cliff Insurance - 3426</option>
+        <option value="222">Three Twins Pub - 222</option>
+        <option value="837">Namaste - 837</option>
+        <option value="321">North River Traders - 321</option>
+        <option value="767">Ricky Shea's Guns and Ammo - 767</option>
+        <option value="837">Chez Marie - 837</option>
+        <option value="555">South Side Towing - 555</option>
+        <option value="938">Centre Music - 938</option>
+        <option value="478">Joe's Coffee - 478</option>
+        <option value="332">Dewey Cheetam &amp; Howe Attorneys at Law - 332</option>
+        <option value="785">Joe's Coffee - 785</option>
+        <option value="858">Thru With Ewe Divorce Attorneys - 858</option>
+       </select>
+      </div>
+      <div id="description">
+        <h3> DOM Effects </h3>
+        <p>For each list in the wrapped set</p>
+        <ul>
+          <li>Adds the size attribute to the select list</li>
+          <li>Adds an input field before the list</li>
+          <li>Wrapps the list and the input field in a div</li>
+        </ul>
+        <h3>  Behavior </h3>
+        <ul>
+          <li>As you type in the added input field, options that don't match are removed from the list"</li>
+          <li>Once the list has been filtered down to a single option, that option is selected.</li>
+        </ul>
+      </div>
+      <div id="usage">
+        <h3> Usage </h3>   
+        <p>In your HTML, create a select list</p>
+        <div class="codeDiv">
+          <code>
+            <pre>
+        &lt;select id="mySelectList"&gt;  
+        &lt;option value="1"&gt;One &lt;/option&gt;
+        &lt;option value="2"&gt;Two &lt;/option&gt;
+        &lt;option value="3"&gt;Three &lt;/option&gt;
+        &lt;/select&gt;  
+            </pre>
+          </code>
+          </div>
+        <p> In your ready function...  </p>
+        <div class="codeDiv">
+          <code>
+            <pre>
+        $(function(){
+          $('#mySelectList').minListFilter();
+        });
+            </pre>
+          </code>
+        </div>
+      </div id="usage">
+      <h3>Options</h3>
+      <div id="options">
+        <ul>
+          <li>
+            <span class="optionName">size</span>
+            <div>
+              <span class="optionDesc">Sets the <b>size</b> attribute of the select list.</span>
+              <span class="optionDefault">Defaults to: 5</span>
+            </div>
+          </li>
+          <li>
+            <span class="optionName">divWrapperClass</span>
+            <div>
+              <span class="optionDesc">
+                The class name of the generated div that wraps the select 
+                list and generated input field.</span>
+              <span class="optionDefault">Defaults to: "selectFilterWrapper"</span>
+            </div>
+          </li>
+          <li>
+            <span class="optionName">criteriaFieldClass</span>
+            <div>
+              <span class="optionDesc">The class name of the generated input field.</span>
+              <span class="optionDefault">Defaults to: "criteriaFieldClass"</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="google">
+      <!-- Google ad -->
+      <script type="text/javascript"><!--
+        google_ad_client = "pub-9219320091433589";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        google_ad_format = "728x90_as";
+        google_ad_type = "text_image";
+        google_ad_channel = "";
+        google_ui_features = "rc:0";
+        //-->
+      </script>
+      <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
+    </div>
+  </body>
+</html>
