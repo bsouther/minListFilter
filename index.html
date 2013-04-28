@@ -106,12 +106,36 @@
               <span class="optionDefault">Defaults to: "criteriaFieldClass"</span>
             </div>
           </li>
+          <li>
+            <span class="optionName">onNarrowedToOne</span>
+            <div>
+              <span class="optionDesc">A function that will be called once the list has been narrowed down to one option</span>
+              <span class="optionDefault">Defaults to nothing"</span>
+            </div>
+          </li>
         </ul>
+      </div>
+      <div class="codeDiv">
+        <code>
+          <pre>
+      $(function(){
+        $('#mySelectList').minListFilter(
+          {size:               10,
+           divWrapperClass:    "mySelectListWrapper",
+           criteriaFieldClass: "myCriteria",
+           onNarrowedToOne:    function(){
+                                 // Move to the next field once we've narrowed
+                                 // the list to a single option.
+                                 $('#nextField').focus();
+                               }});
+      });
+          </pre>
+        </code>
       </div>
     </div>
     <div id="google">
-      <!-- Google ad -->
-      <script type="text/javascript"><!--
+      <!-- Google ad
+      <script type="text/javascript">< ! - -
         google_ad_client = "pub-9219320091433589";
         google_ad_width = 728;
         google_ad_height = 90;
@@ -119,10 +143,10 @@
         google_ad_type = "text_image";
         google_ad_channel = "";
         google_ui_features = "rc:0";
-        //-->
-      </script>
+        //- - >
+      </script> 
       <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-      </script>
+      </script>-->
     </div>
   </body>
 </html>
